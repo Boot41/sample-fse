@@ -1,0 +1,6 @@
+server/.venv
+client/node_modules
+server/db.sqlite3
+*.pyc
+__pycache__
+
