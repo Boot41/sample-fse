@@ -1,4 +1,4 @@
-from node:22 as client_build
+FROM node:22 AS client_build
 
 WORKDIR /code
 COPY ./client /code
@@ -6,7 +6,7 @@ RUN npm install
 RUN npm run build
 
 
-from python:3.12.3
+FROM python:3.12.3
 WORKDIR /code
 COPY server/requirements.txt /code/requirements.txt
 RUN pip install gunicorn
